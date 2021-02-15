@@ -1,0 +1,1480 @@
+province_event = {
+	id = 602001
+	title = "EVENTNAME602001"
+	desc = "EVENTDESC602001"
+	fire_only_once = no
+
+	trigger {
+		NOT = { has_province_modifier = major_port }
+		owner = { freedom_of_trade = 1 }
+		has_building = trading_port
+	}
+
+	mean_time_to_happen = {
+		months = 36
+	}
+
+	option = {
+		name = "EVTOPTA602001"
+		state_scope = {
+			any_owned = {
+    			limit = {
+        			has_building = trading_port
+    			}
+    			add_province_modifier = { name = major_port duration = -1 }
+			}
+		}
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = 602002
+	title = "EVENTNAME602002"
+	desc = "EVENTDESC602002"
+	fire_only_once = no
+	picture = "2nd_ram"
+
+	trigger {
+		tag = HUN
+		AND = {
+			HUN = {
+				is_independant = yes
+				has_country_modifier = minor_union_member
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 3
+	}
+
+	option = {
+		name = "EVTOPTA602002"
+		HUN = {
+			remove_country_modifier = minor_union_member
+			clr_country_flag = minor_union_partner
+		}
+	}
+	option = {
+		name = "EVTOPTB602002"
+		HUN = {
+			remove_country_modifier = minor_union_member
+			clr_country_flag = minor_union_partner
+		}
+	}
+}
+
+country_event = {
+	id = 602003
+	title = "EVENTNAME602003"
+	desc = "EVENTDESC602003"
+	fire_only_once = yes
+	picture = "1st_ram"
+
+	trigger {
+		tag = KUK
+		exists = HUN
+	}
+
+	mean_time_to_happen = {
+		days = 7
+	}
+
+	option = {
+		name = "EVTOPTA602003"
+		ai_chance = {
+            factor = 1
+        }
+	}
+
+	option = {
+		name = "EVTOPTB602003"
+		change_tag_no_core_switch = HUN
+		ai_chance = {
+            factor = 0
+        }
+	}
+}
+
+province_event = { #agriculture NA&europe
+	id = 602004
+	title = "EVENTNAME602004"
+	desc = "EVENTDESC602004"
+	fire_only_once = no
+
+	trigger {
+		has_building = trading_port
+		OR = {
+			continent = europe
+			continent = north_america
+		}
+		NOT = {
+			OR = {
+				terrain = forest
+				terrain = montane_forest
+				terrain = boreal
+				terrain = new_worl_boreal
+				terrain = jungle
+				terrain = new_world_jungle
+				terrain = mining_district
+				terrain = urban
+			}
+		}
+		is_coastal = no
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "EVTOPTA602004"
+		trading_port = -1
+		trade_goods = grain
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+
+	option = {
+		name = "EVTOPTB602004"
+		trading_port = -1
+		trade_goods = cattle
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+
+	option = {
+		name = "EVTOPTC602004"
+		trading_port = -1
+		trade_goods = fruit
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+
+	option = {
+		name = "EVTOPTD602004"
+		trading_port = -1
+		trade_goods = wool
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+
+	option = {
+		name = "EVTOPTE602004"
+		trading_port = -1
+		trade_goods = cotton
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+
+	option = {
+		name = "EVTOPTF602004"
+		trading_port = -1
+		trade_goods = tobacco
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+}
+
+province_event = { #agriculture NOT NA&europe
+	id = 602005
+	title = "EVENTNAME602005"
+	desc = "EVENTDESC602005"
+	fire_only_once = no
+
+	trigger {
+		has_building = trading_port
+		NOT = {
+			OR = {
+				continent = europe
+				continent = north_america
+			}
+		}
+		NOT = {
+			OR = {
+				terrain = forest
+				terrain = montane_forest
+				terrain = boreal
+				terrain = new_worl_boreal
+				terrain = jungle
+				terrain = new_world_jungle
+				terrain = mining_district
+				terrain = urban
+			}
+		}
+		is_coastal = no
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "EVTOPTA602005"
+		trading_port = -1
+		trade_goods = grain
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+
+	option = {
+		name = "EVTOPTB602005"
+		trading_port = -1
+		trade_goods = cattle
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+
+	option = {
+		name = "EVTOPTC602005"
+		trading_port = -1
+		trade_goods = fruit
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+
+	option = {
+		name = "EVTOPTD602005"
+		trading_port = -1
+		trade_goods = wool
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+
+	option = {
+		name = "EVTOPTE602005"
+		trading_port = -1
+		trade_goods = cotton
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+
+	option = {
+		name = "EVTOPTF602005"
+		trading_port = -1
+		trade_goods = tobacco
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+
+	option = {
+		name = "EVTOPTG602005"
+		trading_port = -1
+		trade_goods = tea
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+
+	option = {
+		name = "EVTOPTH602005"
+		trading_port = -1
+		trade_goods = coffee
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+}
+
+province_event = { #agriculture & fishing NA&europe
+	id = 602006
+	title = "EVENTNAME602006"
+	desc = "EVENTDESC602006"
+	fire_only_once = no
+
+	trigger {
+		has_building = trading_port
+		OR = {
+			continent = europe
+			continent = north_america
+		}
+		NOT = {
+			OR = {
+				terrain = forest
+				terrain = montane_forest
+				terrain = boreal
+				terrain = new_worl_boreal
+				terrain = jungle
+				terrain = new_world_jungle
+				terrain = mining_district
+				terrain = urban
+			}
+		}
+		is_coastal = yes
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "EVTOPTA602006"
+		trading_port = -1
+		trade_goods = grain
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+
+	option = {
+		name = "EVTOPTB602006"
+		trading_port = -1
+		trade_goods = cattle
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+
+	option = {
+		name = "EVTOPTC602006"
+		trading_port = -1
+		trade_goods = fruit
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+
+	option = {
+		name = "EVTOPTD602006"
+		trading_port = -1
+		trade_goods = wool
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+
+	option = {
+		name = "EVTOPTE602006"
+		trading_port = -1
+		trade_goods = cotton
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+
+	option = {
+		name = "EVTOPTF602006"
+		trading_port = -1
+		trade_goods = tobacco
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+	option = {
+		name = "EVTOPTG602006"
+		trading_port = -1
+		trade_goods = fish
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+}
+
+province_event = { #agriculture and fishing NOT NA&europe
+	id = 602007
+	title = "EVENTNAME602007"
+	desc = "EVENTDESC602007"
+	fire_only_once = no
+
+	trigger {
+		has_building = trading_port
+		NOT = {
+			OR = {
+				continent = europe
+				continent = north_america
+			}
+		}
+		NOT = {
+			OR = {
+				terrain = forest
+				terrain = montane_forest
+				terrain = boreal
+				terrain = new_worl_boreal
+				terrain = jungle
+				terrain = new_world_jungle
+				terrain = mining_district
+				terrain = urban
+			}
+		}
+		is_coastal = yes
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "EVTOPTA602007"
+		trading_port = -1
+		trade_goods = grain
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+
+	option = {
+		name = "EVTOPTB602007"
+		trading_port = -1
+		trade_goods = cattle
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+
+	option = {
+		name = "EVTOPTC602007"
+		trading_port = -1
+		trade_goods = fruit
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+
+	option = {
+		name = "EVTOPTD602007"
+		trading_port = -1
+		trade_goods = wool
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+
+	option = {
+		name = "EVTOPTE602007"
+		trading_port = -1
+		trade_goods = cotton
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+
+	option = {
+		name = "EVTOPTF602007"
+		trading_port = -1
+		trade_goods = tobacco
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+
+	option = {
+		name = "EVTOPTG602007"
+		trading_port = -1
+		trade_goods = tea
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+
+	option = {
+		name = "EVTOPTH602007"
+		trading_port = -1
+		trade_goods = coffee
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+
+	option = {
+		name = "EVTOPTI602007"
+		trading_port = -1
+		trade_goods = fish
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+}
+
+province_event = { #forestry and agriculture na&europe
+	id = 602008
+	title = "EVENTNAME602008"
+	desc = "EVENTDESC602008"
+	fire_only_once = no
+
+	trigger {
+		has_building = trading_port
+		OR = {
+			continent = europe
+			continent = north_america
+		}
+		OR = {
+			terrain = forest
+			terrain = montane_forest
+			terrain = boreal
+			terrain = new_worl_boreal
+		}
+		is_coastal = no
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "EVTOPTA602008"
+		trading_port = -1
+		trade_goods = grain
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+
+	option = {
+		name = "EVTOPTB602008"
+		trading_port = -1
+		trade_goods = cattle
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+
+	option = {
+		name = "EVTOPTC602008"
+		trading_port = -1
+		trade_goods = fruit
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+
+	option = {
+		name = "EVTOPTD602008"
+		trading_port = -1
+		trade_goods = wool
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+
+	option = {
+		name = "EVTOPTE602008"
+		trading_port = -1
+		trade_goods = cotton
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+
+	option = {
+		name = "EVTOPTF602008"
+		trading_port = -1
+		trade_goods = tobacco
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+
+	option = {
+		name = "EVTOPTG602008"
+		trading_port = -1
+		trade_goods = timber
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+}
+
+province_event = { #agriculture and forestry NOT NA&europe
+	id = 602009
+	title = "EVENTNAME602009"
+	desc = "EVENTDESC602009"
+	fire_only_once = no
+
+	trigger {
+		has_building = trading_port
+		NOT = {
+			OR = {
+				continent = europe
+				continent = north_america
+			}
+		}
+		OR = {
+			terrain = forest
+			terrain = montane_forest
+			terrain = boreal
+			terrain = new_worl_boreal
+		}
+		is_coastal = no
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "EVTOPTA602009"
+		trading_port = -1
+		trade_goods = grain
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+
+	option = {
+		name = "EVTOPTB602009"
+		trading_port = -1
+		trade_goods = cattle
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+
+	option = {
+		name = "EVTOPTC602009"
+		trading_port = -1
+		trade_goods = fruit
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+
+	option = {
+		name = "EVTOPTD602009"
+		trading_port = -1
+		trade_goods = wool
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+
+	option = {
+		name = "EVTOPTE602009"
+		trading_port = -1
+		trade_goods = cotton
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+
+	option = {
+		name = "EVTOPTF602009"
+		trading_port = -1
+		trade_goods = tobacco
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+
+	option = {
+		name = "EVTOPTG602009"
+		trading_port = -1
+		trade_goods = tea
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+
+	option = {
+		name = "EVTOPTH602009"
+		trading_port = -1
+		trade_goods = coffee
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+
+	option = {
+		name = "EVTOPTI602009"
+		trading_port = -1
+		trade_goods = timber
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+}
+
+province_event = { #agriculture and luxury forestry NOT NA&europe
+	id = 602010
+	title = "EVENTNAME602010"
+	desc = "EVENTDESC602010"
+	fire_only_once = no
+
+	trigger {
+		has_building = trading_port
+		NOT = {
+			OR = {
+				continent = europe
+				continent = north_america
+			}
+		}
+		OR = {
+			terrain = jungle
+			terrain = new_world_jungle
+		}
+		is_coastal = no
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "EVTOPTA602010"
+		trading_port = -1
+		trade_goods = grain
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+
+	option = {
+		name = "EVTOPTB602010"
+		trading_port = -1
+		trade_goods = cattle
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+
+	option = {
+		name = "EVTOPTC602010"
+		trading_port = -1
+		trade_goods = fruit
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+
+	option = {
+		name = "EVTOPTD602010"
+		trading_port = -1
+		trade_goods = wool
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+
+	option = {
+		name = "EVTOPTE602010"
+		trading_port = -1
+		trade_goods = cotton
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+
+	option = {
+		name = "EVTOPTF602010"
+		trading_port = -1
+		trade_goods = tobacco
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+
+	option = {
+		name = "EVTOPTG602010"
+		trading_port = -1
+		trade_goods = tea
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+
+	option = {
+		name = "EVTOPTH602010"
+		trading_port = -1
+		trade_goods = coffee
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+
+	option = {
+		name = "EVTOPTI602010"
+		trading_port = -1
+		trade_goods = tropical_wood
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+}
+
+province_event = { #luxury forestry and agriculture na&europe
+	id = 602011
+	title = "EVENTNAME602011"
+	desc = "EVENTDESC602011"
+	fire_only_once = no
+
+	trigger {
+		has_building = trading_port
+		OR = {
+			continent = europe
+			continent = north_america
+		}
+		OR = {
+			terrain = jungle
+			terrain = new_world_jungle
+		}
+		is_coastal = no
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "EVTOPTA602011"
+		trading_port = -1
+		trade_goods = grain
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+
+	option = {
+		name = "EVTOPTB602011"
+		trading_port = -1
+		trade_goods = cattle
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+
+	option = {
+		name = "EVTOPTC602011"
+		trading_port = -1
+		trade_goods = fruit
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+
+	option = {
+		name = "EVTOPTD602011"
+		trading_port = -1
+		trade_goods = wool
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+
+	option = {
+		name = "EVTOPTE602011"
+		trading_port = -1
+		trade_goods = cotton
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+
+	option = {
+		name = "EVTOPTF602011"
+		trading_port = -1
+		trade_goods = tobacco
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+
+	option = {
+		name = "EVTOPTG602011"
+		trading_port = -1
+		trade_goods = tropical_wood
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+}
+
+province_event = { #for mining districts and urban
+	id = 602012
+	title = "EVENTNAME602012"
+	desc = "EVENTDESC602012"
+	fire_only_once = no
+
+	trigger {
+		has_building = trading_port
+		OR = {
+				terrain = mining_district
+				terrain = urban
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "EVTOPTA602012"
+		trading_port = -1
+	}
+}
+
+province_event = { #coastal luxury forestry and agriculture na&europe
+	id = 602013
+	title = "EVENTNAME602013"
+	desc = "EVENTDESC602013"
+	fire_only_once = no
+
+	trigger {
+		has_building = trading_port
+		OR = {
+			continent = europe
+			continent = north_america
+		}
+		OR = {
+			terrain = jungle
+			terrain = new_world_jungle
+		}
+		is_coastal = yes
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "EVTOPTA602013"
+		trading_port = -1
+		trade_goods = grain
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+
+	option = {
+		name = "EVTOPTB602013"
+		trading_port = -1
+		trade_goods = cattle
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+
+	option = {
+		name = "EVTOPTC602013"
+		trading_port = -1
+		trade_goods = fruit
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+
+	option = {
+		name = "EVTOPTD602013"
+		trading_port = -1
+		trade_goods = wool
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+
+	option = {
+		name = "EVTOPTE602013"
+		trading_port = -1
+		trade_goods = cotton
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+
+	option = {
+		name = "EVTOPTF602013"
+		trading_port = -1
+		trade_goods = tobacco
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+
+	option = {
+		name = "EVTOPTG602013"
+		trading_port = -1
+		trade_goods = fish
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+
+	option = {
+		name = "EVTOPTH602013"
+		trading_port = -1
+		trade_goods = tropical_wood
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+}
+
+province_event = { #agriculture and luxury forestry NOT NA&europe
+	id = 602014
+	title = "EVENTNAME602014"
+	desc = "EVENTDESC602014"
+	fire_only_once = no
+
+	trigger {
+		has_building = trading_port
+		NOT = {
+			OR = {
+				continent = europe
+				continent = north_america
+			}
+		}
+		OR = {
+			terrain = jungle
+			terrain = new_world_jungle
+		}
+		is_coastal = yes
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "EVTOPTA602014"
+		trading_port = -1
+		trade_goods = grain
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+
+	option = {
+		name = "EVTOPTB602014"
+		trading_port = -1
+		trade_goods = cattle
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+
+	option = {
+		name = "EVTOPTC602014"
+		trading_port = -1
+		trade_goods = fruit
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+
+	option = {
+		name = "EVTOPTD602014"
+		trading_port = -1
+		trade_goods = wool
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+
+	option = {
+		name = "EVTOPTE602014"
+		trading_port = -1
+		trade_goods = cotton
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+
+	option = {
+		name = "EVTOPTF602014"
+		trading_port = -1
+		trade_goods = tobacco
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+
+	option = {
+		name = "EVTOPTG602014"
+		trading_port = -1
+		trade_goods = tea
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+
+	option = {
+		name = "EVTOPTH602014"
+		trading_port = -1
+		trade_goods = coffee
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+
+	option = {
+		name = "EVTOPTI602014"
+		trading_port = -1
+		trade_goods = fish
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+
+	option = {
+		name = "EVTOPTJ602014"
+		trading_port = -1
+		trade_goods = tropical_wood
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+}
+
+province_event = { #forestry and agriculture na&europe
+	id = 602015
+	title = "EVENTNAME602015"
+	desc = "EVENTDESC602015"
+	fire_only_once = no
+
+	trigger {
+		has_building = trading_port
+		OR = {
+			continent = europe
+			continent = north_america
+		}
+		OR = {
+			terrain = forest
+			terrain = montane_forest
+			terrain = boreal
+			terrain = new_worl_boreal
+		}
+		is_coastal = yes
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "EVTOPTA602015"
+		trading_port = -1
+		trade_goods = grain
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+
+	option = {
+		name = "EVTOPTB602015"
+		trading_port = -1
+		trade_goods = cattle
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+
+	option = {
+		name = "EVTOPTC602015"
+		trading_port = -1
+		trade_goods = fruit
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+
+	option = {
+		name = "EVTOPTD602015"
+		trading_port = -1
+		trade_goods = wool
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+
+	option = {
+		name = "EVTOPTE602015"
+		trading_port = -1
+		trade_goods = cotton
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+
+	option = {
+		name = "EVTOPTF602015"
+		trading_port = -1
+		trade_goods = tobacco
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+
+	option = {
+		name = "EVTOPTG602015"
+		trading_port = -1
+		trade_goods = fish
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+
+	option = {
+		name = "EVTOPTH602015"
+		trading_port = -1
+		trade_goods = timber
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+}
+
+province_event = { #agriculture and forestry NOT NA&europe
+	id = 602016
+	title = "EVENTNAME602016"
+	desc = "EVENTDESC602016"
+	fire_only_once = no
+
+	trigger {
+		has_building = trading_port
+		NOT = {
+			OR = {
+				continent = europe
+				continent = north_america
+			}
+		}
+		OR = {
+			terrain = forest
+			terrain = montane_forest
+			terrain = boreal
+			terrain = new_worl_boreal
+		}
+		is_coastal = yes
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "EVTOPTA602016"
+		trading_port = -1
+		trade_goods = grain
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+
+	option = {
+		name = "EVTOPTB602016"
+		trading_port = -1
+		trade_goods = cattle
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+
+	option = {
+		name = "EVTOPTC602016"
+		trading_port = -1
+		trade_goods = fruit
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+
+	option = {
+		name = "EVTOPTD602016"
+		trading_port = -1
+		trade_goods = wool
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+
+	option = {
+		name = "EVTOPTE602016"
+		trading_port = -1
+		trade_goods = cotton
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+
+	option = {
+		name = "EVTOPTF602016"
+		trading_port = -1
+		trade_goods = tobacco
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+
+	option = {
+		name = "EVTOPTG602016"
+		trading_port = -1
+		trade_goods = tea
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+
+	option = {
+		name = "EVTOPTH602016"
+		trading_port = -1
+		trade_goods = coffee
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+
+	option = {
+		name = "EVTOPTI602016"
+		trading_port = -1
+		trade_goods = timber
+		add_province_modifier = {
+            name = switched_production
+            duration = 1825
+        }
+	}
+}
+
+country_event = { #Serfdom
+	id = 602017
+	title = "EVENTNAME602017"
+	desc = "EVENTDESC602017"
+	fire_only_once = no
+	picture = "3rd_ram"
+
+	trigger {
+		debt_law = serfdom
+		civilized = yes
+		NOT = {has_country_modifier = serfdom_not_abolished_ram}
+		NOT = {has_country_flag = serfdom_not_abolished_ram}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "EVTOPTA602017"
+		add_country_modifier = { name = serfdom_not_abolished_ram duration = -1 }
+		set_country_flag = serfdom_not_abolished_ram
+	}
+}
+
+country_event = { #No serfdom
+	id = 602018
+	title = "EVENTNAME602018"
+	desc = "EVENTDESC602018"
+	fire_only_once = no
+	picture = "4th_ram"
+
+	trigger {
+		NOT = {debt_law = serfdom}
+		has_country_modifier = serfdom_not_abolished_ram
+		has_country_flag = serfdom_not_abolished_ram
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "EVTOPTA602018"
+		remove_country_modifier = serfdom_not_abolished_ram
+		clr_country_flag = serfdom_not_abolished_ram
+	}
+}

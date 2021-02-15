@@ -1,0 +1,25 @@
+province_event = { #railroads can go bankrupt pepehands
+	id = 602200
+	title = "EVENTNAME602200"
+	desc = "EVENTDESC602200"
+	fire_only_once = no
+	ai = no
+
+	trigger {
+		owner = {ai = no}
+		has_building = railroad
+		is_colonial = no
+        NOT = {
+            state_scope = {has_building = railway_company}
+        }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "EVTOPTA602200"
+		railroad = -6
+	}
+}

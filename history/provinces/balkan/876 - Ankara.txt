@@ -1,0 +1,20 @@
+owner = TUR
+controller = TUR
+add_core = TUR
+trade_goods = fruit
+life_rating = 35
+state_building = {
+    level = 1
+    building = small_arms_factory
+    upgrade = yes
+}
+state_building = {
+    leve = 1
+    building = artillery_factory
+    upgrade = yes
+}
+state_building = {
+    leve = 1
+    building = artillery_shell_factory
+    upgrade = yes
+}

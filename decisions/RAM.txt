@@ -1,0 +1,184 @@
+political_decisions = {
+
+    ottoman_ai_cheat = {
+        picture = ai_tariffs
+        potential = {
+            tag = TUR
+            ai = yes
+            NOT = {
+                has_country_modifier = russian_ai_cheat
+            }
+        }
+        allow = {
+        }
+        effect = {
+            add_country_modifier = { name = russian_ai_cheat duration = -1 }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    austrian_ai_cheat = {
+        picture = ai_tariffs
+        potential = {
+            OR = {
+                tag = AUS
+                tag = KUK
+                tag = HUN
+            }
+            ai = yes
+            NOT = {
+                has_country_modifier = austrian_ai_cheat
+            }
+        }
+        allow = {
+        }
+        effect = {
+            add_country_modifier = { name = austrian_ai_cheat duration = -1 }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    russian_ai_cheat = {
+        picture = ai_tariffs
+        potential = {
+            tag = RUS
+            ai = yes
+            NOT = {
+                has_country_modifier = russian_ai_cheat
+            }
+        }
+        allow = {
+        }
+        effect = {
+            add_country_modifier = { name = russian_ai_cheat duration = -1 }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    ram_ai_tariffs = {
+        picture = ai_tariffs
+        potential = {
+            ai = yes
+            NOT = {
+                has_country_modifier = ai_protectionism
+            }
+        }
+        allow = {
+            NOT = {money = 500000}
+        }
+        effect = {
+            add_country_modifier = { name = ai_protectionism duration = 1460 }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    ram_no_ai_free_passage = {
+        picture = ai_tariffs
+        potential = {
+            ai = yes
+        }
+        allow = {
+            war = no
+            OR = {
+                any_neighbor_country = {
+                    war = yes
+                    military_access = THIS
+                }
+                any_greater_power = {
+                    war = yes
+                    military_access = THIS
+                }
+            }
+        }
+        effect = {
+            any_neighbor_country = {
+                limit = {
+                    war = yes
+                    military_access = THIS
+                }
+                end_military_access = THIS
+                relation = {
+                    who = THIS
+                    value = -50
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    ottoman_ai_cheat = {
+        picture = ai_tariffs
+        potential = {
+            tag = TUR
+            ai = yes
+            NOT = {
+                has_country_modifier = russian_ai_cheat
+            }
+        }
+        allow = {
+        }
+        effect = {
+            add_country_modifier = { name = russian_ai_cheat duration = -1 }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    ram_ai_cheat = {
+        picture = ai_tariffs
+        potential = {
+            ai = yes
+            OR = {
+                is_greater_power = yes
+                is_secondary_power = yes
+                tag = RUS
+            }
+            NOT = {
+                has_country_modifier = ram_ai_cheat
+            }
+        }
+        allow = {
+            any_greater_power = {
+                brigades_compare = 2
+            }
+        }
+        effect = {
+            add_country_modifier = { name = ram_ai_cheat duration = 365 }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    ram_ai_tranport_company = { 
+        picture = ai_tariffs
+        potential = {
+            ai = yes
+            invention = railway_companies
+            year = 1838
+        }
+        allow = {
+            NOT = {has_country_flag = state_railway_company_established}
+            NOT = {produces = railway_services}
+        }
+        effect = {
+            build_factory_in_capital_state = railway_company
+            set_country_flag = state_railway_company_established
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+}

@@ -1,0 +1,35 @@
+country_event = {
+	id = 602101
+	title = "EVENTNAME602101"
+	desc = "EVENTDESC602101"
+	fire_only_once = no
+	picture = "hungarian_revolution_1848"
+
+	trigger = {
+		tag = AUS
+        has_country_modifier = angered_hungarian_nobles
+	}
+
+	mean_time_to_happen = {
+		months = 18
+	}
+
+	option = {
+        name = "EVENTOPTA602101"
+        any_pop = {
+            limit = {
+                has_pop_culture = hungarian
+                type = aristocrats
+            }
+            consciousness = 8
+            militancy = 10
+        }
+        any_pop = {
+            limit = {
+                has_pop_culture = hungarian
+                NOT = { type = aristocrats }
+            }
+            consciousness = 6
+        }
+    }
+}
