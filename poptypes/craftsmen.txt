@@ -44,17 +44,41 @@ country_migration_target = {
 
     modifier = {
         factor = 0
-        NOT = {has_pop_culture = THIS}
-    }
-    modifier = {
-        factor = 0
-        has_culture_core = no
+        border_policy = quota_immigration
+        THIS = { NOT = { literacy = 0.6 } }
     }
 
     modifier = {
-        factor = 0
-        border_policy = quota_immigration
-        THIS = { NOT = { literacy = 0.6 } }
+        factor = 0.9
+        unemployment = 0.05
+    }
+    modifier = {
+        factor = 0.9
+        unemployment = 0.1
+    }
+    modifier = {
+        factor = 0.9
+        unemployment = 0.15
+    }
+    modifier = {
+        factor = 0.9
+        unemployment = 0.2
+    }
+    modifier = {
+        factor = 0.9
+        unemployment = 0.25
+    }
+    modifier = {
+        factor = 0.9
+        unemployment = 0.3
+    }
+    modifier = {
+        factor = 0.9
+        unemployment = 0.35
+    }
+    modifier = {
+        factor = 0.1
+        unemployment = 0.5
     }
 
     modifier = {
@@ -122,6 +146,11 @@ migration_target = {
     factor = 0.1
 
     modifier = {
+        factor = 0
+        state_scope = { has_factories = no }
+    }
+
+    modifier = {
         factor = 1000
         has_culture_core  = yes
     }
@@ -137,6 +166,20 @@ migration_target = {
 			worker = craftsmen
         }
     }
+
+    modifier = {
+        factor = 1.1
+        life_rating  = 40
+    }
+    modifier = {
+        factor = 1.1
+        life_rating  = 45
+    }
+    modifier = {
+        factor = 1.1
+        life_rating  = 50
+    }
+    
 }
 
 promote_to = {

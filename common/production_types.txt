@@ -700,7 +700,7 @@ lumber_mill = {
 	}
 	output_goods = lumber 
 	
-	value = 104			#110
+	value = 107			#110
 	bonus = {
 		trigger = { trade_goods_in_state = timber }
 		value = 0.25
@@ -908,7 +908,7 @@ opium_plantation = {
 orchard = {
 	template = RGO_template_farmers
 	output_goods = fruit 
-	value = 2.7
+	value = 1.6
 	farm = yes
 }
 
@@ -920,7 +920,7 @@ precious_metal_mine = {
 }
 
 precious_goods_market = {
-    template = RGO_template_mines
+    template = RGO_template_labourers
     output_goods = precious_goods
     value = 3
     mine = yes
@@ -1299,11 +1299,11 @@ artisan_winery = {
 
 artisan_lumber = {       
 	input_goods = {       
-		timber = 55		#90	total input+maint = 100
+		timber = 66		#90	total input+maint = 100
 	}
 	output_goods = lumber 
 	
-	value = 52			#110
+	value = 64.02			#110
 	
 	owner = {
 		poptype = artisan 
