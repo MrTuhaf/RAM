@@ -35,10 +35,12 @@ life_needs = {
     wool = 0.2
     coal = 0.1
     regular_clothes = 1
+    iron_castings = 0.5
 }
 
 #Total cash needed: 69.075 - Vanilla value: 57.35
 everyday_needs = {
+    iron_castings = 0.5
     paper = 1
     tea = 5                #10.4
     fruit = 1.25

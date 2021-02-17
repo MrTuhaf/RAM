@@ -16,6 +16,7 @@ life_needs = {
 
 #Total cash needed: 50.75 - Vanilla value: 49.25
 everyday_needs = {
+    iron_castings = 1
     opium = 0.1
     fertilizer = 1
     tea = 5
@@ -42,52 +43,21 @@ luxury_needs = {
 }
 
 country_migration_target = {
-        factor = 1
+    factor = 1
+
+    modifier = {
+        factor = 0
+        NOT = {has_pop_culture = THIS}
+    }
+    modifier = {
+        factor = 0
+        has_culture_core = no
+    }
 
     modifier = {
         factor = 0
         border_policy = quota_immigration
         THIS = { NOT = { literacy = 0.6 } }
-    }
-
-    modifier = {
-        factor = 0.9
-        unemployment = 0.05
-    }
-    modifier = {
-        factor = 0.9
-        unemployment = 0.1
-    }
-    modifier = {
-        factor = 0.9
-        unemployment = 0.15
-    }
-    modifier = {
-        factor = 0.9
-        unemployment = 0.2
-    }
-    modifier = {
-        factor = 0.9
-        unemployment = 0.25
-    }
-    modifier = {
-        factor = 0.9
-        unemployment = 0.3
-    }
-    modifier = {
-        factor = 0.9
-        unemployment = 0.35
-    }
-    modifier = {
-        factor = 0.1
-        unemployment = 0.5
-    }
-    modifier = {
-        factor = 3.0
-        OR = {
-            is_primary_culture = THIS
-            is_accepted_culture = THIS
-        }
     }
 
     modifier = {
@@ -149,191 +119,55 @@ country_migration_target = {
             government = hms_government
         }
     }
+
 }
 
 migration_target = {
-    factor = 0.01
-    modifier = {
-        factor = 0.1
-        unemployment = 0.1
-        state_scope = { has_factories = no }
-    }
+    factor = 0.1
 
     modifier = {
-       factor = 15
-       has_building = naval_base
+        factor = 1000
+        has_culture_core  = yes
     }
-
+    
     modifier = {
-        factor = 0
-        is_overseas = yes
-        country = { border_policy = closed_borders }
-    }
-
-    modifier = {
-        factor = 0
-        NOT = { state_scope = {    work_available = { worker = craftsmen } } }
-        can_build_factory = no
-        OR = {
-            unemployment_by_type = { type = farmers value = 0.03  }
-            unemployment_by_type = { type = labourers value = 0.03  }
-        }
-    }
-    modifier = {
-        factor = 2
-        has_pop_culture = THIS
-    }
-    modifier = {
-           factor = 0.25
-           has_culture_core = no
-    }
-    modifier = {
-        factor = 3
-        OR = {
-            is_accepted_culture = yes
-            is_primary_culture = yes
-        }
-        state_scope = {
+        factor = 5
+        NOT = {
             OR = {
-                is_accepted_culture = yes
-                is_primary_culture = yes
+                terrain = montane_tundra
+                terrain = montane_forest
+                terrain = new_world_montane_tundra
+                terrain = mountain
+                terrain = new_world_mountain
+                terrain = urban
+                terrain = arctic
+                terrain = jungle
+                terrain = boreal
+                terrain = marsh
+                terrain = mining_district
+                terrain = desert
+                terrain = semidesert
+                terrain = coastal_desert
+                terrain = coral_island
+                terrain = new_world_boreal
+                terrain = new_world_arctic
+                terrain = new_world_jungle
+                terrain = new_world_desert
+                terrain = new_world_semidesert
             }
-            work_available = { worker = craftsmen }
         }
     }
-    modifier = {
-        factor = 1.2
-        # Audax Validator "." Ignore_NEXT
-        has_pop_religion = THIS
-    }
-    modifier = {
-        factor = 1.5
-        any_core = { is_primary_culture = THIS }
-    }
 
     modifier = {
-        factor = 0.75
-        state_scope = { is_slave = yes }
-    }
-    modifier = {
-        factor = 2
-        is_state_capital = yes
-    }
-    modifier = {
-        factor = 1.5
-        is_capital = yes
-    }
-    modifier = {
-        factor = 1.05
-        is_coastal = yes
-    }
-
-    modifier = {
-        factor = 0.8
-        terrain = steppe
-    }
-
-    modifier = {
-        factor = 0.7
-        terrain = savanna
-    }
-
-    modifier = {
-        factor = 0.8
-        terrain = dryhills
-    }
-
-    modifier = {
-        factor = 0.6
-        terrain = jungle
-    }
-
-    modifier = {
-        factor = 0.6
-        terrain = mountain
-    }
-
-    modifier = {
-        factor = 0.6
-        terrain = montane_forest
-    }
-
-    modifier = {
-        factor = 0.6
-        terrain = marsh
-    }
-
-    modifier = {
-        factor = 0.5
-        terrain = semidesert
-    }
-
-    modifier = {
-        factor = 0.5
-        terrain = boreal
-    }
-
-    modifier = {
-        factor = 0.1
-        terrain = small_island
-    }
-
-    modifier = {
-        factor = 0.01
-        terrain = coral_island
-    }
-
-    modifier = {
-        factor = 0.05
-        terrain = desert
-    }
-
-    modifier = {
-        factor = 0.01
-        terrain = desert
-        continent = africa
-    }
-
-    modifier = {
-        factor = 0.05
-        terrain = arctic
-    }
-
-    modifier = {
-        factor = 0.05
-        terrain = montane_tundra
-    }
-
-    modifier = {
-        factor = 1.05
-        NOT = { country = { any_owned_province = { is_colonial = yes } } }
-        country = { penal_system = colonial_transportation }
+        factor = 100
         OR = {
-            trade_goods = coal
-            trade_goods = sulphur
-            trade_goods = iron
-            trade_goods = precious_metal
-            trade_goods = tobacco
-            trade_goods = coffee
-            trade_goods = tea
+            work_available = {
+			    worker = farmers
+            }
+            work_available = {
+			    worker = labourers
+            }
         }
-        OR = {
-            terrain = desert
-            terrain = arctic
-            terrain = semidesert
-            terrain = boreal
-            terrain = small_island
-            terrain = montane_tundra
-            terrain = coral_island
-        }
-    }
-    modifier = {
-        factor = 2
-        life_rating = 40
-    }
-    modifier = {
-        factor = 2
-        life_rating = 50
     }
 }
 

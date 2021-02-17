@@ -34,6 +34,7 @@ luxury_needs_income =
 
 #Total = 22
 life_needs = {
+    iron_castings = 1
     grain = 2.6  #2.5
     coal = 0.1
     regular_clothes = 1.5

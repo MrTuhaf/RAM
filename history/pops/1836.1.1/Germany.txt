@@ -3266,7 +3266,7 @@
         size = 225
     }
 
-    artisans = {
+    craftsmen = {
         culture = north_german
         religion = protestant
         size = 1250

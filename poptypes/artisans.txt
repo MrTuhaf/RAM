@@ -13,6 +13,7 @@ rebel = {
 
 #Total = 11        Vanilla = 11
 life_needs = {
+    iron_castings = 1
     grain = 2.6 #2.5
     timber = 0.5
     regular_clothes = 1.5

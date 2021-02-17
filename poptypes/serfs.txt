@@ -23,7 +23,8 @@ life_needs = {
 }
 
 #Total cash needed: 69.075 - Vanilla value: 57.35
-everyday_needs = {              
+everyday_needs = {    
+    iron_castings = 0.5          
     opium = 0.01  
     coal = 0.5            #2.3
     fruit = 1
@@ -36,6 +37,7 @@ everyday_needs = {
 
 
 luxury_needs = {
+    iron_castings = 0.5
     tea = 4
     cattle = 1
     wine = 0.5

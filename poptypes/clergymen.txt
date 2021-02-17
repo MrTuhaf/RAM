@@ -41,6 +41,7 @@ life_needs = {
 
 #Total cash needed: 126.9 - Vanilla value: 119.1
 everyday_needs = {
+    iron_castings = 1
     liquor = 4            #17.6
     regular_clothes = 0.5 #29
     grain = 1.5

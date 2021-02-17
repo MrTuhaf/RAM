@@ -16,6 +16,7 @@ rebel = {
 
 #Total = 44
 life_needs = {
+    iron_castings = 1
     cattle = 3    #6
     luxury_clothes = 0.5    #2.8
     coal = 4

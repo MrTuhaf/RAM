@@ -329,6 +329,26 @@ steel_factory = {
 	pop_build_factory = yes
 }
 
+foundry = {
+	type = factory
+
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 99
+	goods_cost =
+	{
+		steel = 400
+		cement = 600
+		lumber = 200
+	}
+	time = 365
+	visibility = yes
+	onmap = no
+	
+	production_type = foundry
+	pop_build_factory = yes
+}
+
 artillery_factory = {
 	type = factory
 

@@ -4,8 +4,13 @@ add_core = AUS
 add_core = TRE
 add_core = SLO
 add_core = VEN
-trade_goods = grain
+trade_goods = fish
 life_rating = 40
+state_building = {
+    level = 1
+    building = clipper_shipyard
+    upgrade = yes
+}
 #state_building = {
 #    level = 1
 #    building = liquor_distillery

@@ -25,6 +25,7 @@ life_needs = {
     wool = 0.5
     paper = 1.5
     furniture = 1
+    iron_castings = 1
 }
 
 #Total cash needed: 65.225 - Vanilla value: 64

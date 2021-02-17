@@ -1320,6 +1320,12 @@
         size = 22275
     }
 
+    craftsmen = {
+        culture = hungarian
+        religion = catholic
+        size = 2000
+    }
+
     serfs = {
         culture = gypsy
         religion = orthodox
