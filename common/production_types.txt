@@ -432,6 +432,7 @@ foundry = {
 	input_goods = { 
 		steel = 4.5		#45	total input+maint = 55
 		iron = 0.5
+		coal = 0.2
 	}
 	output_goods = iron_castings 
 	value = 20			#68
@@ -1127,6 +1128,7 @@ artisan_foundry = {
 	input_goods = { 
 		steel = 2.97
 		iron = 0.33
+		coal = 0.132
 	}
 
 	output_goods = iron_castings 
