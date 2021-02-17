@@ -54,6 +54,7 @@ admin_reform = yes_admin_reform
 
 # Technologies
 flintlock_rifles = 1
+enlightenment_thought
 
 # Technologies
 
