@@ -5,7 +5,7 @@ province_event = { #railroads can go bankrupt pepehands
 	fire_only_once = no
 	ai = no
 
-	trigger {
+	trigger = {
 		owner = {ai = no}
 		has_building = railroad
 		is_colonial = no
