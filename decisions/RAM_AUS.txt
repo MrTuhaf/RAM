@@ -695,7 +695,6 @@ political_decisions = {
             war = no
             AND = {
                 invention = secret_police
-                invention = the_police_state
             }
     	}
 

@@ -1,0 +1,24 @@
+political_decisions = {
+	hungarian_silk = {
+        potential = {
+            tag = HUN
+			owns = 644
+            NOT = {
+                has_country_flag = hungarian_silk_done
+            }
+        }
+        allow = {
+           management_strategy = 1
+        }
+        effect = {
+            644 = {
+				trade_goods = silk
+			}
+            prestige = 25
+            set_country_flag = hungarian_silk_done
+        }
+		ai_will_do = {
+            factor = 1
+        }
+    }
+}
