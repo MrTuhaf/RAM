@@ -223,6 +223,61 @@ mercantilism = {
 
 
 #RAM modifiers
+military_academy_low_fund = {
+    army_tech_research_bonus = 0.05
+    icon = 9
+}
+military_academy_medium_fund = {
+    army_tech_research_bonus = 0.1
+    icon = 9
+}
+military_academy_high_fund = {
+    army_tech_research_bonus = 0.15
+    icon = 9
+}
+
+naval_academy_low_fund = {
+    navy_tech_research_bonus = 0.05
+    icon = 9
+}
+naval_academy_medium_fund = {
+    navy_tech_research_bonus = 0.1
+    icon = 9
+}
+naval_academy_high_fund = {
+    navy_tech_research_bonus = 0.15
+    icon = 9
+}
+
+art_school_low_fund = {
+    culture_tech_research_bonus = 0.05
+    icon = 9
+}
+art_school_medium_fund = {
+    culture_tech_research_bonus = 0.1
+    icon = 9
+}
+art_school_high_fund = {
+    culture_tech_research_bonus = 0.15
+    icon = 9
+}
+
+economy_school_low_fund = {
+    industry_tech_research_bonus = 0.05
+    commerce_tech_research_bonus = 0.05
+    icon = 9
+}
+economy_school_medium_fund = {
+    industry_tech_research_bonus = 0.1
+    commerce_tech_research_bonus = 0.1
+    icon = 9
+}
+economy_school_high_fund = {
+    industry_tech_research_bonus = 0.15
+    commerce_tech_research_bonus = 0.15
+    icon = 9
+}
+
 small_country_research_spending_lvl1 = {
     research_points = 1
 }

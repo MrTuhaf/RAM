@@ -1428,3 +1428,417 @@ country_event = { #No serfdom
 		clr_country_flag = serfdom_not_abolished_ram
 	}
 }
+
+country_event = { #decide research school to fund
+	id = 602019
+	title = "EVENTNAME602019"
+	desc = "EVENTDESC602019"
+	picture = "1st_ram_oxford"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA602019"
+		country_event = 602020
+	}
+	option = {
+		name = "EVTOPTB602019"
+		country_event = 602021
+	}
+	option = {
+		name = "EVTOPTC602019"
+		country_event = 602022
+	}
+	option = {
+		name = "EVTOPTD602019"
+		country_event = 602023
+	}
+}
+
+country_event = { #military academy research fund
+	id = 602020
+	title = "EVENTNAME602020"
+	desc = "EVENTDESC602020"
+	picture = "1st_ram_military_school"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA602020"
+		add_country_modifier = {
+            name = military_academy_low_fund
+            duration = 1460
+        }
+		random_owned = {
+            limit = {
+                owner = {
+                    NOT = { money = 300000 }
+                    check_variable = { which = owed_cash_money value = 9 }
+                }
+            }
+            owner = { change_variable = { which = owed_cash_money value = 300 } }
+        }
+        random_owned = {
+            limit = {
+                owner = {
+                    NOT = { money = 300000 }
+                    NOT = { check_variable = { which = owed_cash_money value = 1 } }
+                }
+            }
+            owner = { set_variable = { which = owed_cash_money value = 300 } }
+        }
+        random_owned = {
+            limit = { owner = { money = 300000 } }
+            owner = { treasury = -300000 }
+        }
+	}
+	option = {
+		name = "EVTOPTB602020"
+		add_country_modifier = {
+            name = military_academy_medium_fund
+            duration = 1460
+        }
+		random_owned = {
+            limit = {
+                owner = {
+                    NOT = { money = 700000 }
+                    check_variable = { which = owed_cash_money value = 9 }
+                }
+            }
+            owner = { change_variable = { which = owed_cash_money value = 700 } }
+        }
+        random_owned = {
+            limit = {
+                owner = {
+                    NOT = { money = 700000 }
+                    NOT = { check_variable = { which = owed_cash_money value = 1 } }
+                }
+            }
+            owner = { set_variable = { which = owed_cash_money value = 700 } }
+        }
+        random_owned = {
+            limit = { owner = { money = 700000 } }
+            owner = { treasury = -700000 }
+        }
+	}
+	option = {
+		name = "EVTOPTC602020"
+		add_country_modifier = {
+            name = military_academy_high_fund
+            duration = 1460
+        }
+		random_owned = {
+            limit = {
+                owner = {
+                    NOT = { money = 1500000 }
+                    check_variable = { which = owed_cash_money value = 9 }
+                }
+            }
+            owner = { change_variable = { which = owed_cash_money value = 1500 } }
+        }
+        random_owned = {
+            limit = {
+                owner = {
+                    NOT = { money = 1500000 }
+                    NOT = { check_variable = { which = owed_cash_money value = 1 } }
+                }
+            }
+            owner = { set_variable = { which = owed_cash_money value = 1500 } }
+        }
+        random_owned = {
+            limit = { owner = { money = 1500000 } }
+            owner = { treasury = -1500000 }
+        }
+	}
+}
+
+country_event = { #naval academy research fund
+	id = 602021
+	title = "EVENTNAME602021"
+	desc = "EVENTDESC602021"
+	picture = "1st_ram_navy_school"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA602021"
+		add_country_modifier = {
+            name = naval_academy_low_fund
+            duration = 1460
+        }
+		random_owned = {
+            limit = {
+                owner = {
+                    NOT = { money = 300000 }
+                    check_variable = { which = owed_cash_money value = 9 }
+                }
+            }
+            owner = { change_variable = { which = owed_cash_money value = 300 } }
+        }
+        random_owned = {
+            limit = {
+                owner = {
+                    NOT = { money = 300000 }
+                    NOT = { check_variable = { which = owed_cash_money value = 1 } }
+                }
+            }
+            owner = { set_variable = { which = owed_cash_money value = 300 } }
+        }
+        random_owned = {
+            limit = { owner = { money = 300000 } }
+            owner = { treasury = -300000 }
+        }
+	}
+	option = {
+		name = "EVTOPTB602020"
+		add_country_modifier = {
+            name = naval_academy_medium_fund
+            duration = 1460
+        }
+		random_owned = {
+            limit = {
+                owner = {
+                    NOT = { money = 700000 }
+                    check_variable = { which = owed_cash_money value = 9 }
+                }
+            }
+            owner = { change_variable = { which = owed_cash_money value = 700 } }
+        }
+        random_owned = {
+            limit = {
+                owner = {
+                    NOT = { money = 700000 }
+                    NOT = { check_variable = { which = owed_cash_money value = 1 } }
+                }
+            }
+            owner = { set_variable = { which = owed_cash_money value = 700 } }
+        }
+        random_owned = {
+            limit = { owner = { money = 700000 } }
+            owner = { treasury = -700000 }
+        }
+	}
+	option = {
+		name = "EVTOPTC602021"
+		add_country_modifier = {
+            name = naval_academy_high_fund
+            duration = 1460
+        }
+		random_owned = {
+            limit = {
+                owner = {
+                    NOT = { money = 1500000 }
+                    check_variable = { which = owed_cash_money value = 9 }
+                }
+            }
+            owner = { change_variable = { which = owed_cash_money value = 1500 } }
+        }
+        random_owned = {
+            limit = {
+                owner = {
+                    NOT = { money = 1500000 }
+                    NOT = { check_variable = { which = owed_cash_money value = 1 } }
+                }
+            }
+            owner = { set_variable = { which = owed_cash_money value = 1500 } }
+        }
+        random_owned = {
+            limit = { owner = { money = 1500000 } }
+            owner = { treasury = -1500000 }
+        }
+	}
+}
+
+country_event = { #art and philosophy school fund
+	id = 602022
+	title = "EVENTNAME602022"
+	desc = "EVENTDESC602022"
+	picture = "1st_ram_vienna_art"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA602022"
+		add_country_modifier = {
+            name = art_school_low_fund
+            duration = 1460
+        }
+		random_owned = {
+            limit = {
+                owner = {
+                    NOT = { money = 300000 }
+                    check_variable = { which = owed_cash_money value = 9 }
+                }
+            }
+            owner = { change_variable = { which = owed_cash_money value = 300 } }
+        }
+        random_owned = {
+            limit = {
+                owner = {
+                    NOT = { money = 300000 }
+                    NOT = { check_variable = { which = owed_cash_money value = 1 } }
+                }
+            }
+            owner = { set_variable = { which = owed_cash_money value = 300 } }
+        }
+        random_owned = {
+            limit = { owner = { money = 300000 } }
+            owner = { treasury = -300000 }
+        }
+	}
+	option = {
+		name = "EVTOPTB602022"
+		add_country_modifier = {
+            name = art_school_medium_fund
+            duration = 1460
+        }
+		random_owned = {
+            limit = {
+                owner = {
+                    NOT = { money = 700000 }
+                    check_variable = { which = owed_cash_money value = 9 }
+                }
+            }
+            owner = { change_variable = { which = owed_cash_money value = 700 } }
+        }
+        random_owned = {
+            limit = {
+                owner = {
+                    NOT = { money = 700000 }
+                    NOT = { check_variable = { which = owed_cash_money value = 1 } }
+                }
+            }
+            owner = { set_variable = { which = owed_cash_money value = 700 } }
+        }
+        random_owned = {
+            limit = { owner = { money = 700000 } }
+            owner = { treasury = -700000 }
+        }
+	}
+	option = {
+		name = "EVTOPTC602022"
+		add_country_modifier = {
+            name = art_school_high_fund
+            duration = 1460
+        }
+		random_owned = {
+            limit = {
+                owner = {
+                    NOT = { money = 1500000 }
+                    check_variable = { which = owed_cash_money value = 9 }
+                }
+            }
+            owner = { change_variable = { which = owed_cash_money value = 1500 } }
+        }
+        random_owned = {
+            limit = {
+                owner = {
+                    NOT = { money = 1500000 }
+                    NOT = { check_variable = { which = owed_cash_money value = 1 } }
+                }
+            }
+            owner = { set_variable = { which = owed_cash_money value = 1500 } }
+        }
+        random_owned = {
+            limit = { owner = { money = 1500000 } }
+            owner = { treasury = -1500000 }
+        }
+	}
+}
+
+country_event = { #economy school fund
+	id = 602023
+	title = "EVENTNAME602023"
+	desc = "EVENTDESC602023"
+	picture = "1st_ram_harvard"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA602023"
+		add_country_modifier = {
+            name = economy_school_low_fund
+            duration = 1460
+        }
+		random_owned = {
+            limit = {
+                owner = {
+                    NOT = { money = 300000 }
+                    check_variable = { which = owed_cash_money value = 9 }
+                }
+            }
+            owner = { change_variable = { which = owed_cash_money value = 300 } }
+        }
+        random_owned = {
+            limit = {
+                owner = {
+                    NOT = { money = 300000 }
+                    NOT = { check_variable = { which = owed_cash_money value = 1 } }
+                }
+            }
+            owner = { set_variable = { which = owed_cash_money value = 300 } }
+        }
+        random_owned = {
+            limit = { owner = { money = 300000 } }
+            owner = { treasury = -300000 }
+        }
+	}
+	option = {
+		name = "EVTOPTB602023"
+		add_country_modifier = {
+            name = economy_school_medium_fund
+            duration = 1460
+        }
+		random_owned = {
+            limit = {
+                owner = {
+                    NOT = { money = 700000 }
+                    check_variable = { which = owed_cash_money value = 9 }
+                }
+            }
+            owner = { change_variable = { which = owed_cash_money value = 700 } }
+        }
+        random_owned = {
+            limit = {
+                owner = {
+                    NOT = { money = 700000 }
+                    NOT = { check_variable = { which = owed_cash_money value = 1 } }
+                }
+            }
+            owner = { set_variable = { which = owed_cash_money value = 700 } }
+        }
+        random_owned = {
+            limit = { owner = { money = 700000 } }
+            owner = { treasury = -700000 }
+        }
+	}
+	option = {
+		name = "EVTOPTC602023"
+		add_country_modifier = {
+            name = economy_school_high_fund
+            duration = 1460
+        }
+		random_owned = {
+            limit = {
+                owner = {
+                    NOT = { money = 1500000 }
+                    check_variable = { which = owed_cash_money value = 9 }
+                }
+            }
+            owner = { change_variable = { which = owed_cash_money value = 1500 } }
+        }
+        random_owned = {
+            limit = {
+                owner = {
+                    NOT = { money = 1500000 }
+                    NOT = { check_variable = { which = owed_cash_money value = 1 } }
+                }
+            }
+            owner = { set_variable = { which = owed_cash_money value = 1500 } }
+        }
+        random_owned = {
+            limit = { owner = { money = 1500000 } }
+            owner = { treasury = -1500000 }
+        }
+	}
+}
