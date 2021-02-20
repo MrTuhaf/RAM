@@ -169,16 +169,6 @@ province_event = { #agriculture NA&europe
 	}
 
 	option = {
-		name = "EVTOPTE602004"
-		trading_port = -1
-		trade_goods = cotton
-		add_province_modifier = {
-            name = switched_production
-            duration = 1825
-        }
-	}
-
-	option = {
 		name = "EVTOPTF602004"
 		trading_port = -1
 		trade_goods = tobacco
@@ -368,16 +358,6 @@ province_event = { #agriculture & fishing NA&europe
 		name = "EVTOPTD602006"
 		trading_port = -1
 		trade_goods = wool
-		add_province_modifier = {
-            name = switched_production
-            duration = 1825
-        }
-	}
-
-	option = {
-		name = "EVTOPTE602006"
-		trading_port = -1
-		trade_goods = cotton
 		add_province_modifier = {
             name = switched_production
             duration = 1825
@@ -587,16 +567,6 @@ province_event = { #forestry and agriculture na&europe
 		name = "EVTOPTD602008"
 		trading_port = -1
 		trade_goods = wool
-		add_province_modifier = {
-            name = switched_production
-            duration = 1825
-        }
-	}
-
-	option = {
-		name = "EVTOPTE602008"
-		trading_port = -1
-		trade_goods = cotton
 		add_province_modifier = {
             name = switched_production
             duration = 1825
@@ -1040,16 +1010,6 @@ province_event = { #coastal luxury forestry and agriculture na&europe
 	}
 
 	option = {
-		name = "EVTOPTE602013"
-		trading_port = -1
-		trade_goods = cotton
-		add_province_modifier = {
-            name = switched_production
-            duration = 1825
-        }
-	}
-
-	option = {
 		name = "EVTOPTF602013"
 		trading_port = -1
 		trade_goods = tobacco
@@ -1265,16 +1225,6 @@ province_event = { #forestry and agriculture na&europe
 		name = "EVTOPTD602015"
 		trading_port = -1
 		trade_goods = wool
-		add_province_modifier = {
-            name = switched_production
-            duration = 1825
-        }
-	}
-
-	option = {
-		name = "EVTOPTE602015"
-		trading_port = -1
-		trade_goods = cotton
 		add_province_modifier = {
             name = switched_production
             duration = 1825

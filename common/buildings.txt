@@ -781,7 +781,7 @@ railroad = {
 }
 
 trading_port = {
-	type = infrastructure
+	type = fort
 	goods_cost =
 	{
 		paper = 0.1

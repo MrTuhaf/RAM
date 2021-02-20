@@ -1083,6 +1083,7 @@ economic_reforms = {
             farm_rgo_eff = 0.25
             mine_rgo_eff = 0.25
             civilization_progress_modifier = 0.15
+            activate_technology = freedom_of_trade
             allow = { NOT = { has_country_flag = lacking_writing_system } }
 
             on_execute = {
@@ -1388,6 +1389,7 @@ economic_reforms = {
                     treasury = -10000
                     activate_technology = guild_based_production
                     build_factory_in_capital_state = small_arms_factory
+                    build_factory_in_capital_state = ammunition_factory
 
 
                     any_pop = {

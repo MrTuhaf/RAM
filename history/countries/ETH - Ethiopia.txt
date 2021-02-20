@@ -73,5 +73,6 @@ schools = developing_tech_school
 
     # Technologies
     flintlock_rifles = 1
+    enlightenment_thought = 1
 
 }

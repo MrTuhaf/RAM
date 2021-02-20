@@ -54,6 +54,7 @@ foreign_weapons = yes_foreign_weapons
 
 # Technologies
 flintlock_rifles = 1
+freedom_of_trade = 1
 
 modern_winemaking = yes
 small_arms_production = yes
@@ -79,6 +80,8 @@ oob = "MCK_oob.txt"
     # Technologies
     flintlock_rifles = 1
     military_staff_system = 1
+    freedom_of_trade = 1
+    enlightenment_thought = 1
 
 # Inventions
 

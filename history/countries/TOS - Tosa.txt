@@ -59,6 +59,7 @@ finance_reform = yes_finance_reform
 
 # Technologies
 flintlock_rifles = 1
+freedom_of_trade = 1
 
 # Inventions
 small_arms_production = yes
@@ -93,6 +94,7 @@ finance_reform = finance_reform_two
 # Technologies
 flintlock_rifles = 1
 post_nelsonian_thought = 1
+freedom_of_trade = 1
 
 # Inventions
 #bottling_process = yes

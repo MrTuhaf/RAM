@@ -80,6 +80,7 @@ oob = "SIA_oob.txt"
     #Technologies
     freedom_of_trade = 1
     military_staff_system = 1
+    freedom_of_trade = 1
 }
 
 govt_flag = {

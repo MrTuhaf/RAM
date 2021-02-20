@@ -53,6 +53,7 @@ foreign_weapons = yes_foreign_weapons
 education_reform = yes_education_reform
 # Technologies
 flintlock_rifles = 1
+freedom_of_trade = 1
 
 # Starting Consciousness
 consciousness = 0
@@ -78,5 +79,6 @@ education_reform = yes_education_reform
 
 # Technologies
 flintlock_rifles = 1
+freedom_of_trade = 1
 
 }

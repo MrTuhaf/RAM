@@ -57,6 +57,7 @@ land_reform = yes_land_reform
 
 # Technologies
 flintlock_rifles = 1
+freedom_of_trade = 1
 
 # Starting Consciousness
 consciousness = 0
@@ -85,4 +86,6 @@ oob = "KOR_oob.txt"
     # Technologies
     flintlock_rifles = 1
     military_staff_system = 1
+    enlightenment_thought = 1
+    freedom_of_trade = 1
 }
