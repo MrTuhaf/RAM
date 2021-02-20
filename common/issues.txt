@@ -659,7 +659,7 @@ political_reforms = {
         next_step_only = yes
         primary_culture_only = {
             rules = { primary_culture_voting = yes }
-            global_assimilation_rate = 0.15
+            global_assimilation_rate = 0.05
             non_accepted_pop_consciousness_modifier = 0.01
             allow = {
                 citizenship_policy = residency
@@ -669,13 +669,13 @@ political_reforms = {
         }
         culture_voting_only = {
             rules = { culture_voting = yes }
-            global_assimilation_rate = 0.05
             allow = {
                 NOT = { has_country_flag = government_busy_with_something }
             }
         }
         all_voting_pops = {
             rules = { all_voting = yes }
+            global_assimilation_rate = -0.15
             non_accepted_pop_militancy_modifier = -0.01
             global_immigrant_attract = 0.08
             allow = {
