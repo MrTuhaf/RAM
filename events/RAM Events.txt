@@ -1932,3 +1932,121 @@ country_event = { #decide research school to fund AI
 		}
 	}
 }
+
+country_event = { #decide research school to fund AI
+	id = 602025
+	title = "EVENTNAME602025"
+	desc = "EVENTDESC602025"
+	picture = "1st_ram_oxford"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA602023"
+		add_country_modifier = {
+            name = unciv_research_low_fund
+            duration = 1460
+        }
+		random_owned = {
+            limit = {
+                owner = {
+                    NOT = { money = 300000 }
+                    check_variable = { which = owed_cash_money value = 9 }
+                }
+            }
+            owner = { change_variable = { which = owed_cash_money value = 300 } }
+        }
+        random_owned = {
+            limit = {
+                owner = {
+                    NOT = { money = 300000 }
+                    NOT = { check_variable = { which = owed_cash_money value = 1 } }
+                }
+            }
+            owner = { set_variable = { which = owed_cash_money value = 300 } }
+        }
+        random_owned = {
+            limit = { owner = { money = 300000 } }
+            owner = { treasury = -300000 }
+        }
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				money = 700000
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB602023"
+		add_country_modifier = {
+            name = unciv_research_medium_fund
+            duration = 1460
+        }
+		random_owned = {
+            limit = {
+                owner = {
+                    NOT = { money = 700000 }
+                    check_variable = { which = owed_cash_money value = 9 }
+                }
+            }
+            owner = { change_variable = { which = owed_cash_money value = 700 } }
+        }
+        random_owned = {
+            limit = {
+                owner = {
+                    NOT = { money = 700000 }
+                    NOT = { check_variable = { which = owed_cash_money value = 1 } }
+                }
+            }
+            owner = { set_variable = { which = owed_cash_money value = 700 } }
+        }
+        random_owned = {
+            limit = { owner = { money = 700000 } }
+            owner = { treasury = -700000 }
+        }
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				money = 1500000
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTC602023"
+		add_country_modifier = {
+            name = unciv_research_high_fund
+            duration = 1460
+        }
+		random_owned = {
+            limit = {
+                owner = {
+                    NOT = { money = 1500000 }
+                    check_variable = { which = owed_cash_money value = 9 }
+                }
+            }
+            owner = { change_variable = { which = owed_cash_money value = 1500 } }
+        }
+        random_owned = {
+            limit = {
+                owner = {
+                    NOT = { money = 1500000 }
+                    NOT = { check_variable = { which = owed_cash_money value = 1 } }
+                }
+            }
+            owner = { set_variable = { which = owed_cash_money value = 1500 } }
+        }
+        random_owned = {
+            limit = { owner = { money = 1500000 } }
+            owner = { treasury = -1500000 }
+        }
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {money = 1500000}
+			}
+		}
+	}
+}

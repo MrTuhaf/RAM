@@ -250,4 +250,32 @@ political_decisions = {
         }
     }
 
+    ram_donate_to_research_unciv = { 
+        picture = 1st_ram_paris
+        potential = {
+            civilized = no
+            NOT = {
+                OR = {
+                    has_country_modifier = unciv_research_low_fund
+                    has_country_modifier = unciv_research_medium_fund
+                    has_country_modifier = unciv_research_high_fund
+                }
+            }
+        }
+        allow = {
+            money = 300000
+            research_reform = yes_research_reform
+        }
+        effect = {
+            country_event = 602025
+        }
+        ai_will_do = {
+            factor = 1
+            modifier = {
+				factor = 0
+				NOT = {money = 300000}
+			}
+        }
+    }
+
 }

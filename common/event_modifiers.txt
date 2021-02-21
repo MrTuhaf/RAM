@@ -223,6 +223,18 @@ mercantilism = {
 
 
 #RAM modifiers
+unciv_research_low_fund = {
+    research_points_modifier = 0.15
+}
+
+unciv_research_medium_fund = {
+    research_points_modifier = 0.3
+}
+
+unciv_research_high_fund = {
+    research_points_modifier = 0.5
+}
+
 military_academy_low_fund = {
     army_tech_research_bonus = 0.05
     icon = 9
