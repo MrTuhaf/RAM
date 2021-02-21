@@ -24,7 +24,6 @@ province_event = {
     			add_province_modifier = { name = major_port duration = -1 }
 			}
 		}
-		ai_chance = { factor = 100 }
 	}
 }
 
@@ -1840,5 +1839,96 @@ country_event = { #economy school fund
             limit = { owner = { money = 1500000 } }
             owner = { treasury = -1500000 }
         }
+	}
+}
+
+country_event = { #decide research school to fund AI
+	id = 602024
+	title = "EVENTNAME602019"
+	desc = "EVENTDESC602019"
+	picture = "1st_ram_oxford"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA602023"
+		treasury = -300000
+		add_country_modifier = {
+            name = military_academy_low_fund
+            duration = 1460
+        }
+		add_country_modifier = {
+            name = naval_academy_low_fund
+            duration = 1460
+        }
+		add_country_modifier = {
+            name = art_school_low_fund
+            duration = 1460
+        }
+		add_country_modifier = {
+            name = economy_school_low_fund
+            duration = 1460
+        }
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				money = 700000
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB602023"
+		treasury = -700000
+		add_country_modifier = {
+            name = military_academy_medium_fund
+            duration = 1460
+        }
+		add_country_modifier = {
+            name = naval_academy_medium_fund
+            duration = 1460
+        }
+		add_country_modifier = {
+            name = art_school_medium_fund
+            duration = 1460
+        }
+		add_country_modifier = {
+            name = economy_school_medium_fund
+            duration = 1460
+        }
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				money = 1500000
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTC602023"
+		treasury = -1500000
+		add_country_modifier = {
+            name = military_academy_high_fund
+            duration = 1460
+        }
+		add_country_modifier = {
+            name = naval_academy_high_fund
+            duration = 1460
+        }
+		add_country_modifier = {
+            name = art_school_high_fund
+            duration = 1460
+        }
+		add_country_modifier = {
+            name = economy_school_high_fund
+            duration = 1460
+        }
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {money = 1500000}
+			}
+		}
 	}
 }

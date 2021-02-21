@@ -213,4 +213,41 @@ political_decisions = {
         }
     }
 
+    ram_donate_to_research_ai = { 
+        picture = 1st_ram_paris
+        potential = {
+            civilized = yes
+            ai = yes
+            NOT = {
+                OR = {
+                    has_country_modifier = military_academy_low_fund
+                    has_country_modifier = military_academy_medium_fund
+                    has_country_modifier = military_academy_high_fund
+                    has_country_modifier = naval_academy_low_fund
+                    has_country_modifier = naval_academy_medium_fund
+                    has_country_modifier = naval_academy_high_fund
+                    has_country_modifier = art_school_low_fund
+                    has_country_modifier = art_school_medium_fund
+                    has_country_modifier = art_school_high_fund
+                    has_country_modifier = economy_school_low_fund
+                    has_country_modifier = economy_school_medium_fund
+                    has_country_modifier = economy_school_high_fund
+                }
+            }
+        }
+        allow = {
+            money = 300000
+        }
+        effect = {
+            country_event = 602024
+        }
+        ai_will_do = {
+            factor = 1
+            modifier = {
+				factor = 0
+				NOT = {money = 300000}
+			}
+        }
+    }
+
 }
