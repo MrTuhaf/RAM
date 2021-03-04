@@ -3,7 +3,6 @@ province_event = { #railroads can go bankrupt pepehands
 	title = "EVENTNAME602200"
 	desc = "EVENTDESC602200"
 	fire_only_once = no
-	ai = no
 
 	trigger = {
 		owner = {ai = no}
