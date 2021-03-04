@@ -153,6 +153,11 @@ migration_target = {
         factor = 1000
         has_culture_core  = yes
     }
+
+    modifier = {
+        factor = 0
+        has_culture_core = no
+    }
     
     modifier = {
         factor = 5
