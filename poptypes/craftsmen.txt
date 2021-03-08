@@ -143,21 +143,21 @@ country_migration_target = {
 }
 
 migration_target = {
-    factor = 0.1
+    factor = 0.01
 
     modifier = {
-        factor = 0
+        factor = 0.1
         state_scope = { has_factories = no }
     }
 
     modifier = {
-        factor = 0
+        factor = 0.1
         has_culture_core = no
     }
 
     modifier = {
-        factor = 1000
-        has_culture_core  = yes
+        factor = 0
+        NOT = {has_pop_culture = THIS}
     }
     
     modifier = {

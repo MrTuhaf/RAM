@@ -147,16 +147,16 @@ country_migration_target = {
 }
 
 migration_target = {
-    factor = 0.1
+    factor = 0.01
 
     modifier = {
-        factor = 1000
-        has_culture_core  = yes
+        factor = 0.1
+        has_culture_core = no
     }
 
     modifier = {
-        factor = 0
-        has_culture_core = no
+        factor = 0.1
+        NOT = {has_pop_culture = THIS}
     }
     
     modifier = {
