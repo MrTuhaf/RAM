@@ -1382,6 +1382,12 @@ ideologies = {
             }
         }
         modifier = {
+            factor = 0
+            state_scope = {
+                is_colonial = yes
+            }
+        }
+        modifier = {
             factor = 0.4
             militancy = 6
         }
@@ -1479,7 +1485,12 @@ ideologies = {
 
     communist = {
         factor = 0.5
-
+        modifier = {
+            factor = 0
+            state_scope = {
+                is_colonial = yes
+            }
+        }
         modifier = {
             factor = 0.9
             consciousness = 5

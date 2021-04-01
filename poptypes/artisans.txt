@@ -1443,6 +1443,12 @@ ideologies = {
             }
         }
         modifier = {
+            factor = 0
+            state_scope = {
+                is_colonial = yes
+            }
+        }
+        modifier = {
             factor = 1.1
             state_scope = {
                 OR = {
@@ -1541,6 +1547,12 @@ ideologies = {
     communist = {
         factor = 1
 
+        modifier = {
+            factor = 0
+            state_scope = {
+                is_colonial = yes
+            }
+        }
         modifier = {
             factor = 0.1
             NOT = {

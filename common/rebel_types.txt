@@ -4454,7 +4454,7 @@ socialist_rebels = {
     # The rebel type with the highest modifier for this pop gets picked
     spawn_chance = {
         factor = 1.02
-
+        
         modifier = {
             factor = 0
             type = slaves
